@@ -1,0 +1,17 @@
+query selectAllLicences {
+     description: "Select all the licences"
+     statement:
+         SELECT org.pivot.licences.licence
+}
+
+
+
+
+/*
+query selectAllLicencesBasedOnCompany {
+     description: "Select all the licences Based on Company"
+     statement:
+         SELECT org.pivot.licences.licence
+              WHERE (licenceDetails.companyName==_$companyName)
+
+} */

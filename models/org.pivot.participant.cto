@@ -1,0 +1,24 @@
+namespace  org.pivot.participant
+
+
+abstract participant pivotParticipants identified by participantKey {
+  o String          participantKey
+  o Profile         profile 
+}
+
+concept Profile {
+  o String fName
+  o String lname
+  o String email
+}
+
+participant pivotAdmin extends pivotParticipants {
+}
+
+participant pivotPublic extends pivotParticipants {
+}
+
+participant pivotPrivate extends pivotParticipants {
+
+}
+

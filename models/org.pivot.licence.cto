@@ -1,0 +1,64 @@
+namespace org.pivot.licences
+
+//import  org.pivot.license.licenses
+
+
+asset licence identified by licenceId {
+
+  o		String          licenceId 
+  o		String 			licenceName			
+  o  	String 			licenceIssuedBy
+  o  	String 			licenceIssuedTo
+  o		String 			licenceNumber
+  o		DateTime 		createdOn
+  o		DateTime 		licenceValidityDate
+  o		String			licenceDescription optional 
+  //o 	LicenceDetails		 licenceDetails
+
+
+}
+
+
+
+//concept LicenceDetails{
+  //o String companyName
+
+//}
+
+
+transaction addLicence {
+  o   	String      		licenceId
+  o		String 				licenceName			
+  o  	String 				licenceIssuedBy
+  o  	String 				licenceIssuedTo
+  o		String 				licenceNumber
+  o		DateTime 			createdOn
+  o		DateTime 			licenceValidityDate
+  o		String				licenceDescription optional 	
+  //  o 	LicenceDetails		 licenceDetails
+  o 	certificateStatus   certificateStatus default="LIVE"
+
+
+}
+  
+ enum certificateStatus {
+  o   LIVE
+  o   EXPIRED
+}
+
+
+transaction viewLicence {
+ --> Participant participants
+}
+
+
+transaction viewLicenceBasedOnCompanyName {
+
+  o String 				companyName
+}
+
+
+
+
+
+
