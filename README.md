@@ -1,3 +1,3 @@
-# pivot
+# Hyperledger Fabric
 
 For test purpose
